@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <script src="./script.js" defer></script>
    <link rel="stylesheet" href="./style.css">
    <title>Etch A Sketch</title>
 </head>
 <body>
-   <button id="button">Choose Grid</button>
-   <div id="grid"></div>
+   <div id="container">
+      <div id="btns">
+         <button id="button">Choose Grid</button>
+         <input type="color" name="color-picker" id="color">
+         <button id="clear">Clear grid</button>
+      </div>
+      <div id="grid"></div>
+   </div>
+
+   <script src="./script.js"></script>
 </body>
 </html>
