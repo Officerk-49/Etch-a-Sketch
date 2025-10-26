@@ -45,23 +45,26 @@ body {
    border: 1px solid black;
 }
 
+button {
+   background-color: rgb(66, 108, 54);
+}
+
+button:active {
+   transform: scale(0.98);
+}
+
 #button {
    margin: 40px;
-   background-color: rgb(33, 68, 23);
    color: white;
    border: none;
    border-radius: 7px;
    padding: 8px;
 }
 
-#button:active {
-   transform: scale(0.98);
-}
-
 input[type=color] {
    background-color: transparent;
    border: none;
-   width: 90px;
+   width: 85px;
    height: 55px;
    border-radius: 20px;
    cursor: pointer;
@@ -69,13 +72,8 @@ input[type=color] {
 
 #clear {
    margin: 40px;
-   background-color: rgb(33, 68, 23);
    color: white;
    border: none;
    border-radius: 7px;
    padding: 8px;
-}
-
-#clear:active {
-   transform: scale(0.98);
 }

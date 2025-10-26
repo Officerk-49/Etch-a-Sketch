@@ -9,26 +9,22 @@ for (let i = 0; i < 256; i++) {
    grid.appendChild(square);
    square.addEventListener("mouseenter", () => {
       square.style.backgroundColor = color.value;
-   });
-
-   clear.addEventListener('click', ()=> {
-   square.style.backgroundColor = '#fff';
+      square.style.transition = 'none';
    });
 }
 
 let choice = 16;
 button.addEventListener("click", () => {
-   let userInput = Number(prompt("Choose the dimensions of your grid:", choice));
+   let userInput = Number(prompt("Choose the dimensions of your grid:"));
    let newChoice = userInput;
 
    if (!isNaN(userInput) && userInput !== 0 && userInput !== null) {
       choice = newChoice;
    }
-
    if (choice > 100) {
       choice = 100;
    }
-   console.log(choice);
+
    grid.innerHTML = '';
    let dimensions = choice * choice;
    for (let i = 0; i < dimensions; i++) {
@@ -37,10 +33,7 @@ button.addEventListener("click", () => {
       grid.appendChild(square);
       square.addEventListener("mouseenter", () => {
          square.style.backgroundColor = color.value;
-      });
-
-      clear.addEventListener('click', ()=> {
-         square.style.backgroundColor = '#fff';
+         square.style.transition = 'none';
       });
 
       let size = 320 / choice;
@@ -49,4 +42,10 @@ button.addEventListener("click", () => {
    }
 });
 
-
+clear.addEventListener('click', ()=> {
+   const squares = document.querySelectorAll('.square');
+   squares.forEach(square => {
+      square.style.backgroundColor = '#fff';
+      square.style.transition = 'background-color 0.25s ease, color 0.25s ease';
+   });
+})
